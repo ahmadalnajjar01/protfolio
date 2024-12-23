@@ -9,124 +9,17 @@
   margin: 0;
 }
 body {
+  font-family: Arial, sans-serif;
   height: 100vh;
   background-color: var(--main_color);
   color: var(--third_color);
+  line-height: 1.5;
 }
 .navbar .container-fluid .navbar-brand img {
   height: 50px;
   width: 50px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--main_color);
-  color: var(--third_color);
-  line-height: 1.5;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-info div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.contact-info div i {
-  background-color: #444;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #444;
-  border-radius: 5px;
-  background: #222;
-  color: var(--third_color);
-}
-
-.contact-form button {
-  padding: 10px;
-  background-color: var(--secondory_color);
-  color: var(--main_color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.footer {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: var(--main_color);
-  text-align: center;
-}
-
-.footer .links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer .links a {
-  color: var(--secondory_color);
-  text-decoration: none;
-}
-.footer .contact {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 10px;
-}
-.footer .contact div {
-  display: inline;
-  text-align: center;
-}
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--main_color);
-  color: var(--third_color);
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-/* Container and Layout */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -137,7 +30,6 @@ body {
   animation: fadeIn 1.5s ease-out;
 }
 
-/* Contact Info */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -154,13 +46,6 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.contact-info div:hover {
-  transform: translateX(10px);
-  background-color: #222;
-  padding: 5px;
-  border-radius: 5px;
-}
-
 .contact-info div i {
   background-color: #444;
   padding: 10px;
@@ -168,11 +53,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.contact-info div:hover i {
-  background-color: var(--secondory_color);
-}
-
-/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -187,15 +67,8 @@ body {
   border: 1px solid #444;
   border-radius: 5px;
   background: #222;
-  color: #fff;
+  color: var(--third_color);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--secondory_color);
-  box-shadow: 0 0 10px var(--secondory_color);
-  outline: none;
 }
 
 .contact-form button {
@@ -209,12 +82,6 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: var(--secondory_color);
-  transform: scale(1.05);
-}
-
-/* Footer */
 .footer {
   margin-top: 40px;
   padding: 20px;
@@ -236,15 +103,42 @@ body {
   transition: color 0.3s ease;
 }
 
-.footer .links a:hover {
-  color: var(--secondory_color);
-}
-
 .footer .contact {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-top: 10px;
+}
+.footer .contact div {
+  display: inline;
+  text-align: center;
+}
+
+.contact-info div:hover {
+  transform: translateX(10px);
+  background-color: #222;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.contact-info div:hover i {
+  background-color: var(--secondory_color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--secondory_color);
+  box-shadow: 0 0 10px var(--secondory_color);
+  outline: none;
+}
+
+.contact-form button:hover {
+  background-color: var(--secondory_color);
+  transform: scale(1.05);
+}
+
+.footer .links a:hover {
+  color: var(--secondory_color);
 }
 
 /* Animations */
